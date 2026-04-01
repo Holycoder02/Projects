@@ -1,0 +1,15 @@
+##Input we need from the user
+  Total rent 
+  Total food ordered for snacking
+  Electricity units spend charge per units
+  persons living in room/flawater/internet
+  input invalidation 
+  save file 
+  per-person breakdown with names
+  
+
+## Out put
+ Total amount you've to pay 
+ show each person how much they owes for rent, food , Electricity, ..........!
+
+ let's start coding
