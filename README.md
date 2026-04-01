@@ -74,7 +74,45 @@ python "Rent Calculator/app.py"
 ```
 
 ---
+### 3. 🎮 Rock Paper Scissor
+**Level:** Beginner | **Python Skills:** Conditionals, Loops, User Input, Randomization
 
+A classic interactive game where you play against the computer. Features multiple rounds, score tracking, and live statistics.
+
+**What It Does:**
+- Play Rock-Paper-Scissor against the computer
+- Computer makes random moves
+- Automatic score tracking across multiple rounds
+- Case-insensitive input (rock, Rock, ROCK all work)
+- Input validation with error messages
+- Run multiple games without restarting
+- View final statistics on exit
+
+**Best For:**
+- Learning game logic and conditionals
+- Understanding while loops and input validation
+- Building interactive console applications
+- Practicing if/elif/else statements
+- Fun casual gameplay!
+
+**Game Rules:**
+- Rock beats Scissor
+- Scissor beats Paper
+- Paper beats Rock
+
+**Quick Run:**
+```bash
+python "Rock Paper Scissor/main.py"
+```
+
+**How to Play:**
+1. Run the program
+2. Enter: Rock, Paper, or Scissor (or type 'quit' to exit)
+3. Computer makes a random choice
+4. Result is displayed with current score
+5. Repeat or type 'quit' to see final score
+
+---
 ## �️ Installation & Setup
 
 ### Step 1: Check Python Installation
