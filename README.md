@@ -34,6 +34,38 @@ A classic game implementation where players compete against the computer.
 - **Main File**: `main.py`
 - [View Details](Rock%20Paper%20Scissor/README.md)
 
+### 4. **Tic Tac Toe Game** 🎮
+A two-player Tic Tac Toe game with graphical interface.
+- Two-player gameplay
+- Win and draw detection
+- Visual winning highlights
+- Reset button for multiple games
+- Player turn indicator
+- **Location**: `Tic Tac Toe/`
+- **Main File**: `main.py`
+- [View Details](Tic%20Tac%20Toe/README.md)
+
+### 5. **Text Editor** 📝
+A simple yet functional text editor with file operations.
+- Create, open, and save files
+- Clean menu-based interface
+- Text wrapping for readability
+- Cross-platform compatible
+- **Location**: `Text editior/`
+- **Main File**: `main.py`
+- [View Details](Text%20editior/README.md)
+
+### 6. **Digital Clock** ⏰
+A real-time digital clock with date display.
+- Live time updates every second
+- 12-hour format with AM/PM
+- Current date display
+- Large, readable font
+- Minimal design
+- **Location**: `Digital Clock/`
+- **Main File**: `main.py`
+- [View Details](Digital%20Clock/README.md)
+
 ## 🚀 Quick Start
 
 ### File Manager
@@ -51,6 +83,24 @@ python app.py
 ### Rock Paper Scissor
 ```bash
 cd "Rock Paper Scissor"
+python main.py
+```
+
+### Tic Tac Toe
+```bash
+cd "Tic Tac Toe"
+python main.py
+```
+
+### Text Editor
+```bash
+cd "Text editior"
+python main.py
+```
+
+### Digital Clock
+```bash
+cd "Digital Clock"
 python main.py
 ```
 
@@ -75,10 +125,25 @@ Projects/
 ├── Rock Paper Scissor/
 │   ├── main.py
 │   └── README.md
+├── Tic Tac Toe/
+│   ├── main.py
+│   ├── main2.py
+│   └── README.md
+├── Text editior/
+│   ├── main.py
+│   ├── example.txt
+│   └── README.md
+├── Digital Clock/
+│   ├── main.py
+│   └── README.md
+├── GUIDE.md
 └── README.md
 ```
 
 ## 🔧 Project Details
+- **Tic Tac Toe**: GUI development (Tkinter), game logic, win condition detection, event handling
+- **Text Editor**: GUI design, file operations (read/write), menu systems, text widgets
+- **Digital Clock**: Real-time updates, string formatting, schedule-based callbacks, GUI styling
 
 Each project folder contains:
 - **Main Python file**: The executable script
@@ -94,7 +159,31 @@ These projects demonstrate:
 
 ## 🎯 Usage
 
-1. Navigate to the project folder you want to use
+1. Navigate to the project fold
+
+## 🖥️ Platform Support
+
+All projects work on:
+- ✅ Windows
+- ✅ macOS
+- ✅ Linux
+
+GUI-based projects (Tic Tac Toe, Text Editor, Digital Clock) require Tkinter, which is included with most Python installations.
+
+## 🤝 Contributing
+
+Feel free to fork, modify, and enhance these projects! Some ideas:
+- Add AI to Tic Tac Toe
+- Implement syntax highlighting in Text Editor
+- Add themes to Digital Clock
+- Create networked multiplayer games
+
+## 📝 Notes
+
+- Each project is self-contained and independent
+- No external dependencies required (except Tkinter for GUI projects)
+- All code is beginner-friendly and well-commented
+- Perfect for learning Python fundamentals and GUI programminger you want to use
 2. Read the project's README.md for specific instructions
 3. Run the main Python file
 4. Follow the on-screen prompts

@@ -17,12 +17,15 @@ A comprehensive guide to understanding, running, and extending the Projects coll
 
 ## Overview
 
-This collection contains three Python projects:
+This collection contains six Python projects:
 - **File Manager**: A file manipulation utility
 - **Rent Calculator**: An expense splitting application
 - **Rock Paper Scissor**: An interactive game
+- **Tic Tac Toe**: A two-player GUI game
+- **Text Editor**: A simple file editor
+- **Digital Clock**: A real-time clock display
 
-All projects are built with Python 3.x and require no external dependencies.
+All projects are built with Python 3.x. GUI projects (Tic Tac Toe, Text Editor, Digital Clock) require Tkinter, which is included with most Python installations.
 
 ---
 
@@ -154,10 +157,149 @@ Player Input → Computer Choice → Compare → Determine Winner
 
 ---
 
+### 4. Tic Tac Toe Game 🎮
+
+**Purpose**: Play two-player Tic Tac Toe with graphical interface
+
+**Key Features**:
+- Visual 3×3 game board with Tkinter
+- Two-player gameplay (Player X vs Player O)
+- Automatic win detection (8 combinations)
+- Draw/Tie detection
+- Winning squares highlighted in green
+- Reset button for multiple games
+- Turn indicator label
+
+**Game Rules**:
+- Players alternate turns (X always goes first)
+- Click empty squares to place your mark
+- First to get 3 in a row wins
+- Rows: top, middle, bottom
+- Columns: left, center, right
+- Diagonals: top-left to bottom-right, top-right to bottom-left
+
+**Winning Combinations** (8 total):
+```
+Horizontal: [0,1,2] [3,4,5] [6,7,8]
+Vertical:   [0,3,6] [1,4,7] [2,5,8]
+Diagonal:   [0,4,8] [2,4,6]
+```
+
+**Board Layout**:
+```
+ 0 | 1 | 2
+-----------
+ 3 | 4 | 5
+-----------
+ 6 | 7 | 8
+```
+
+---
+
+### 5. Text Editor 📝
+
+**Purpose**: Simple file editor for creating and editing text files
+
+**Key Features**:
+- Create new documents
+- Open existing `.txt` files
+- Save files with custom names
+- Menu-based interface (File menu)
+- Text wrapping for readability
+- Cross-platform compatibility
+
+**Menu Options**:
+| Option | Action |
+|--------|--------|
+| File → New | Clear editor (start fresh) |
+| File → Open | Load a `.txt` file |
+| File → Save | Save current content to file |
+| File → Exit | Close application |
+
+**Supported File Types**:
+- `.txt` (Text files)
+- Any plain text format
+
+**Workflow**:
+```
+Start → Type/Paste → Save → Later Open → Edit → Save Again
+```
+
+---
+
+### 6. Digital Clock ⏰
+
+**Purpose**: Display current time and date in real-time
+
+**Key Features**:
+- Live 1-second updates
+- 12-hour format with AM/PM
+- Current date display (MM/DD/YY)
+- Large 50pt font for visibility
+- Yellow background, black text
+- Minimal, clutter-free design
+
+**Time Format**:
+```
+HH:MM:SS AM/PM
+MM/DD/YY
+```
+
+**Example Display**:
+```
+02:30:45 PM
+ 04/02/26
+```
+
+**Customization Options**:
+- Change font (modify `font=('calibri', 50, 'bold')`)
+- Change colors (modify `background`, `foreground`)
+- Change update speed (modify `after(1000)` milliseconds)
+- Modify time format (adjust `strftime()` format string)
+
 ## Installation & Setup
 
 ### Option 1: Direct Download
+### Running Tic Tac Toe
 
+```bash
+cd "Tic Tac Toe"
+python main.py
+```
+
+**Gameplay**:
+1. Window opens showing 3×3 grid
+2. X goes first
+3. Click empty squares to place marks
+4. Game ends when someone gets 3 in a row or board is full
+5. Click "Reset Game" button to play again
+
+### Running Text Editor
+
+```bash
+cd "Text editior"
+python main.py
+```
+
+**Workflow**:
+1. Editor window opens with blank page
+2. Type or paste text
+3. File → Open to load file
+4. File → Save to save as new file
+5. File → New to clear and start fresh
+
+### Running Digital Clock
+
+```bash
+cd "Digital Clock"
+python main.py
+```
+
+**Features**:
+1. Clock window displays immediately
+2. Time updates every second
+3. Shows current time and date
+4. Close with window X button
 1. Extract the Projects folder to your desired location
 2. Open Command Prompt/Terminal
 3. Navigate to the Projects folder
@@ -248,14 +390,23 @@ python main.py
 Enter your move (Rock, Paper, Scissor) or 'quit': Rock
 User choice: Rock, Computer choice = Paper
 Paper wins
+Tic Tac Toe game won't start
+**Solution**:
+- Ensure Tkinter is installed: `python -m tkinter`
+- Check for syntax errors in main.py
+- Verify button positions in grid layout
 
-Enter your move (Rock, Paper, Scissor) or 'quit': Paper
-User choice: Paper, Computer choice = Rock
-Paper wins
+#### Issue: Text Editor won't open files
+**Solution**:
+- Check file permissions
+- Ensure file format is `.txt`
+- Try opening from the dialog (don't type path)
 
-Enter your move (Rock, Paper, Scissor) or 'quit': quit
-Final Score - You: 1 | Computer: 1
-```
+#### Issue: Digital Clock shows wrong time
+**Solution**:
+- Check system clock settings
+- Verify timezone is correct
+- Restart the application
 
 ---
 
