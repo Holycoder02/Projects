@@ -66,6 +66,41 @@ A real-time digital clock with date display.
 - **Main File**: `main.py`
 - [View Details](Digital%20Clock/README.md)
 
+### 7. **TO DO App** ✅
+A task management application with time tracking.
+- Add, update, delete, and view tasks
+- Store task times with each task
+- Dictionary-based task storage
+- Interactive menu-driven interface
+- Task time display (e.g., 10:30 AM)
+- Input validation with error handling
+- **Location**: `TO DO App/`
+- **Main File**: `main.py`
+- [View Details](TO%20DO%20App/README.md)
+
+### 8. **Image Slideshow** 🖼️
+A GUI-based image slideshow viewer with automatic cycling.
+- Load and display multiple images
+- Automatic image rotation every 3 seconds
+- Image resizing (1080x1080 pixels)
+- Start/Stop button control
+- Uses PIL for image handling
+- Tkinter-based GUI
+- **Location**: `Image slide show/`
+- **Main File**: `main.py`
+- [View Details](Image%20slide%20show/README.md)
+
+### 9. **Payment QR Code Generator** 💳
+Generate QR codes for UPI payment methods.
+- Support for multiple payment apps (PhonePe, Paytm, Google Pay)
+- QR code generation from UPI IDs
+- Display QR codes for scanning
+- Save QR codes as image files (optional)
+- UPI URL schema implementation
+- **Location**: `Accept payment with paython/`
+- **Main File**: `main.py`
+- [View Details](Accept%20payment%20with%20paython/README.md)
+
 ## 🚀 Quick Start
 
 ### File Manager
@@ -95,6 +130,30 @@ python main.py
 ### Text Editor
 ```bash
 cd "Text editior"
+python main.py
+```
+
+### Digital Clock
+```bash
+cd "Digital Clock"
+python main.py
+```
+
+### TO DO App
+```bash
+cd "TO DO App"
+python main.py
+```
+
+### Image Slideshow
+```bash
+cd "Image slide show"
+python main.py
+```
+
+### Payment QR Code Generator
+```bash
+cd "Accept payment with paython"
 python main.py
 ```
 

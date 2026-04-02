@@ -17,15 +17,18 @@ A comprehensive guide to understanding, running, and extending the Projects coll
 
 ## Overview
 
-This collection contains six Python projects:
+This collection contains nine Python projects:
 - **File Manager**: A file manipulation utility
 - **Rent Calculator**: An expense splitting application
 - **Rock Paper Scissor**: An interactive game
 - **Tic Tac Toe**: A two-player GUI game
 - **Text Editor**: A simple file editor
 - **Digital Clock**: A real-time clock display
+- **TO DO App**: A task management system with time tracking
+- **Image Slideshow**: An image viewer with automatic cycling
+- **Payment QR Code Generator**: UPI payment QR code generator
 
-All projects are built with Python 3.x. GUI projects (Tic Tac Toe, Text Editor, Digital Clock) require Tkinter, which is included with most Python installations.
+All projects are built with Python 3.x. GUI projects (Tic Tac Toe, Text Editor, Digital Clock, Image Slideshow) require Tkinter and some require PIL. The Payment QR Code Generator requires qrcode and pillow libraries.
 
 ---
 
@@ -257,6 +260,143 @@ MM/DD/YY
 - Change update speed (modify `after(1000)` milliseconds)
 - Modify time format (adjust `strftime()` format string)
 
+---
+
+### 7. TO DO App ✅
+
+**Purpose**: Manage daily tasks with time scheduling
+
+**Key Features**:
+- Dictionary-based task storage
+- Task with time tracking (e.g., "10:30 AM")
+- Add new tasks anytime
+- Update task names and times
+- Delete completed tasks
+- View all tasks with times
+- User-friendly menu interface
+
+**Menu Operations**:
+| Option | Action |
+|--------|--------|
+| 1 | Add new task with time |
+| 2 | Update existing task name and time |
+| 3 | Delete task by name |
+| 4 | View all tasks with times |
+| 5 | Exit application |
+
+**Data Structure**:
+```python
+tasks = {
+    "Task Name": "HH:MM AM/PM",
+    "Complete project": "2:30 PM",
+    "Lunch break": "1:00 PM"
+}
+```
+
+**Time Format**:
+- 12-hour format: "10:30 AM" or "2:45 PM"
+- 24-hour format: "14:30" (also supported)
+
+**Workflow**:
+```
+Start → Add tasks with times → View all → Update/Delete → Exit
+```
+
+---
+
+### 8. Image Slideshow 🖼️
+
+**Purpose**: Display rotating images in a GUI window
+
+**Key Features**:
+- Load multiple images from file paths
+- Auto-resize to 1080×1080 pixels
+- Automatic cycling (3-second delays)
+- Button control to start slideshow
+- Uses PIL for image manipulation
+- Tkinter-based GUI window
+- Non-blocking image updates using `root.after()`
+
+**Supported Image Formats**:
+- JPG / JPEG
+- PNG
+- AVIF
+- GIF (static images)
+- WebP
+- BMP
+
+**Image Cycling**:
+- Images rotate every 3 seconds (3000 ms)
+- Continuous loop using modulo arithmetic
+- Non-blocking updates with `root.after()`
+
+**Configuration**:
+```python
+image_size = (1080, 1080)  # Change resize dimension
+root.after(3000, update_image)  # Change delay in milliseconds
+```
+
+**Setup Instructions**:
+1. Add image paths to `image_paths` list in code
+2. Ensure all images exist on your system
+3. Run the program
+4. Click "Start Slideshow" button to begin
+5. Images automatically rotate every 3 seconds
+
+---
+
+### 9. Payment QR Code Generator 💳
+
+**Purpose**: Generate QR codes for UPI payment methods
+
+**Key Features**:
+- Support for 3 payment apps (PhonePe, Paytm, Google Pay)
+- UPI URL schema implementation
+- QR code display on screen
+- Optional saving to image files
+- Customizable recipient name and merchant code
+- Automatic QR code generation
+
+**UPI URL Format**:
+```
+upi://pay?pa={UPI_ID}&pn={Recipient_Name}&mc={Merchant_Code}
+```
+
+**Setup Requirements**:
+```bash
+pip install qrcode[pil]
+pip install pillow
+```
+
+**Supported Payment Apps**:
+1. **PhonePe**: UPI standard protocol
+2. **Paytm**: UPI standard protocol
+3. **Google Pay**: UPI standard protocol
+
+**Workflow**:
+```
+Input UPI ID → Generate URLs → Create QR Codes → Display → Optional: Save to disk
+```
+
+**Customization**:
+```python
+# Modify recipient name
+"Your Business Name"  # Change this
+
+# Modify merchant code
+"1234"  # Merchant code
+
+# Save to file (uncomment lines)
+# phonepe_qr.save("phonepe_qr.png")
+# paytm_qr.save("paytm_qr.png")
+# googlepay_qr.save("googlepay_qr.png")
+```
+
+**Output**:
+- Three QR codes displayed in separate windows
+- One for each payment app
+- Users can scan directly with phone
+
 ## Installation & Setup
 
 ### Option 1: Direct Download
@@ -300,31 +440,95 @@ python main.py
 2. Time updates every second
 3. Shows current time and date
 4. Close with window X button
-1. Extract the Projects folder to your desired location
-2. Open Command Prompt/Terminal
-3. Navigate to the Projects folder
-4. Choose a project and run it
 
-### Option 2: Clone from Repository
+### Running TO DO App
 
 ```bash
-git clone <repository-url>
-cd Projects
+cd "TO DO App"
+python main.py
 ```
 
-### Verification
+**Usage Example**:
+```
+---WELCOME TO THE TASK MANGEMENT APP---
+Enter how many tasks you want to add = 2
+Enter task 1 name = Complete report
+Enter task 1 time (e.g., 10:30 AM) = 2:00 PM
+Enter task 2 name = Call client
+Enter task 2 time (e.g., 10:30 AM) = 3:30 PM
 
-Verify your setup:
+Today's tasks are:
+  - Complete report | Time: 2:00 PM
+  - Call client | Time: 3:30 PM
+
+Enter 1-Add
+2-Update
+3-Delete
+4-View
+5-Exit: 1
+Enter task you want to add = Lunch meeting
+Enter task time (e.g., 10:30 AM) = 12:30 PM
+Task 'Lunch meeting' at 12:30 PM has been added successfully
+```
+
+### Running Image Slideshow
+
 ```bash
-# Check Python
-python --version
+cd "Image slide show"
+python main.py
+```
 
-# Test File Manager
-cd filemanger
-python "File manger.py"
+**Requirements**:
+```bash
+pip install pillow
+```
 
-# Test imports work
-python -c "import os, random, datetime"
+**Setup**:
+1. Edit `main.py` and add your image file paths to the `image_paths` list
+2. Use raw strings with `r` prefix for Windows paths
+3. Ensure all image files exist
+4. Run the program
+5. Click "Start Slideshow" to begin
+6. Images rotate every 3 seconds automatically
+
+**Example Image Paths**:
+```python
+image_paths = [
+    r"C:\Users\YourName\Pictures\vacation.jpg",
+    r"C:\Users\YourName\Pictures\family.png",
+    r"C:\Users\YourName\Downloads\photo.avif",
+]
+```
+
+### Running Payment QR Code Generator
+
+```bash
+cd "Accept payment with paython"
+python main.py
+```
+
+**Requirements**:
+```bash
+pip install qrcode[pil]
+pip install pillow
+```
+
+**Usage Example**:
+```
+Enter your upi id: merchant@hdfcbank
+# Three QR code windows appear for:
+# 1. PhonePe
+# 2. Paytm
+# 3. Google Pay
+# Users can scan any code with their payment app
+```
+
+**Save QR Codes**:
+Uncomment these lines in `main.py` to save as image files:
+```python
+phonepe_qr.save("phonepe_qr.png")
+paytm_qr.save("paytm_qr.png")
+googlepay_qr.save("googlepay_qr.png")
 ```
 
 ---
