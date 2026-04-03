@@ -17,7 +17,7 @@ A comprehensive guide to understanding, running, and extending the Projects coll
 
 ## Overview
 
-This collection contains nine Python projects:
+This collection contains twelve Python projects:
 - **File Manager**: A file manipulation utility
 - **Rent Calculator**: An expense splitting application
 - **Rock Paper Scissor**: An interactive game
@@ -27,8 +27,11 @@ This collection contains nine Python projects:
 - **TO DO App**: A task management system with time tracking
 - **Image Slideshow**: An image viewer with automatic cycling
 - **Payment QR Code Generator**: UPI payment QR code generator
+- **Contact Book**: A contact management system
+- **Spell Checker**: A spelling error detection and correction tool
+- **Student Grade Management System**: A student grade tracking application
 
-All projects are built with Python 3.x. GUI projects (Tic Tac Toe, Text Editor, Digital Clock, Image Slideshow) require Tkinter and some require PIL. The Payment QR Code Generator requires qrcode and pillow libraries.
+All projects are built with Python 3.x. GUI projects (Tic Tac Toe, Text Editor, Digital Clock, Image Slideshow, Student Grade Management System) require Tkinter and some require PIL. The Payment QR Code Generator requires qrcode and pillow libraries. The Spell Checker requires pyspellchecker library.
 
 ---
 
@@ -397,6 +400,169 @@ Input UPI ID → Generate URLs → Create QR Codes → Display → Optional: Sav
 - One for each payment app
 - Users can scan directly with phone
 
+---
+
+### 10. Contact Book 📇
+
+**Purpose**: Manage personal contacts with name, age, email, and phone number
+
+**Key Features**:
+- Add new contacts with details (name, age, email, mobile)
+- View individual contact information
+- Update existing contact details
+- Delete contacts from the system
+- Search contacts by name (case-insensitive)
+- Count total contacts in the book
+- Duplicate contact prevention
+- Interactive menu-driven interface
+
+**Menu Operations**:
+| Option | Action |
+|--------|--------|
+| 1 | Add new contact |
+| 2 | View specific contact |
+| 3 | Update contact details |
+| 4 | Delete contact |
+| 5 | Search contacts by name |
+| 6 | Count total contacts |
+| 7 | Exit application |
+
+**Data Structure**:
+```python
+contacts = {
+    "John Doe": {
+        "age": 28,
+        "email": "john@example.com",
+        "mobile": "9876543210"
+    }
+}
+```
+
+**Workflow**:
+```
+Start → Add/View/Update/Delete/Search → View all → Exit
+```
+
+**Search Functionality**:
+- Case-insensitive partial matching
+- Finds contacts by name pattern
+- Displays full contact details when found
+
+---
+
+### 11. Spell Checker 🔤
+
+**Purpose**: Check and correct spelling errors in text using PySpellChecker
+
+**Key Features**:
+- Real-time spell checking
+- Automatic word correction suggestions
+- Interactive text input interface
+- Misspelled words highlighted with corrections
+- Case-insensitive checking
+- Continuous checking without restarting
+- Dictionary-based validation
+
+**Setup Requirements**:
+```bash
+pip install pyspellchecker
+```
+
+**How It Works**:
+1. User enters text to check
+2. Each word is validated against dictionary
+3. Misspelled words are identified
+4. Suggested corrections are displayed
+5. Corrected text is shown to user
+
+**Output Format**:
+```
+Correcting "speling" to "spelling"
+Corrected Text: spelling is important
+```
+
+**Supported Languages**:
+- English (primary support)
+- Extensible for other languages
+
+**Workflow**:
+```
+Enter Text → Check Words → Suggest Corrections → Display Results → Continue or Exit
+```
+
+**Limitations**:
+- May not recognize proper names (people, places)
+- Limited by built-in dictionary
+- Context-based corrections not supported
+- Slang and informal language not recognized
+
+---
+
+### 12. Student Grade Management System 📊
+
+**Purpose**: Manage student grades with CLI and GUI interfaces
+
+**Key Features**:
+- Add students with grades
+- Update student grades
+- Delete student records
+- View all students and grades
+- Duplicate student prevention
+- Input validation (grades 0-100 for GUI)
+- Success and error notifications
+- Two interface options: CLI and GUI
+
+**Two Implementations**:
+
+**A. CLI Version (main.py)**:
+- Command-line text interface
+- Menu-driven interaction
+- Simple and quick to run
+- No dependencies beyond Python
+
+**B. GUI Version (main2.py)**:
+- Tkinter graphical interface
+- Colored buttons for easy navigation
+- Dialog boxes for input
+- Formatted student list display
+- Professional appearance
+- Better user experience
+
+**Menu Operations**:
+| Option | Action |
+|--------|--------|
+| 1 | Add new student |
+| 2 | Update student grade |
+| 3 | Delete student |
+| 4 | View all students |
+| 5 | Exit application |
+
+**Data Structure**:
+```python
+student_grade = {
+    "Alice": 92,
+    "Bob": 85,
+    "Charlie": 78
+}
+```
+
+**GUI Features**:
+- Color-coded buttons (green for Add, blue for Update, red for Delete, orange for View)
+- Text area displaying formatted student list
+- Dialog-based input for names and grades
+- Real-time student list updates
+- Success/error message boxes
+
+**Workflow**:
+```
+Start → Add/Update/Delete/View → Display Results → Continue or Exit
+```
+
+**Grade Validation**:
+- GUI version: Enforces 0-100 range
+- Prevents duplicate students
+- Numeric input validation
+
 ## Installation & Setup
 
 ### Option 1: Direct Download
@@ -530,6 +696,83 @@ phonepe_qr.save("phonepe_qr.png")
 paytm_qr.save("paytm_qr.png")
 googlepay_qr.save("googlepay_qr.png")
 ```
+
+### Running Contact Book
+
+```bash
+cd "Contact book"
+python main.py
+```
+
+**Example Usage**:
+```
+Contact Book app
+1. Add contact
+2. View contacts
+3. Update contact
+4. Delete contact
+5. Search contact
+6. Count contacts
+7. Exit
+
+Enter you choice = 1
+Enter contact name = John Doe
+enter age = 28
+Enter email = john@example.com
+Enter mobile number = 9876543210
+Contact John Doe added successfully!
+```
+
+### Running Spell Checker
+
+```bash
+cd "Spell checker"
+python main.py
+```
+
+**Requirements**:
+```bash
+pip install pyspellchecker
+```
+
+**Example Usage**:
+```
+---Spell Checkker---
+Enter text to check (or type "exit" to quit): hallo world
+Correcting "hallo" to "hello"
+Corrected Text : hello world
+Enter text to check (or type "exit" to quit): exit
+Closing the program
+```
+
+### Running Student Grade Management System
+
+**CLI Version**:
+```bash
+cd "Student Grade mangement system"
+python main.py
+```
+
+**GUI Version**:
+```bash
+cd "Student Grade mangement system"
+python main2.py
+```
+
+**Workflow**:
+```
+1. Select option from menu
+2. Enter student details (name and grade)
+3. View list of all students
+4. Update or delete as needed
+5. Exit when done
+```
+
+**GUI Features**:
+- Professional window interface with colored buttons
+- Dialog boxes for input
+- Real-time student list with formatted display
+- Color-coded operations (Add: Green, Update: Blue, Delete: Red, View: Orange)
 
 ---
 
