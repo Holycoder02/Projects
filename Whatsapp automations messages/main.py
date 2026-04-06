@@ -16,8 +16,9 @@ from datetime import datetime, timedelta
 import time
 
 # step 2 twilio credentials
-account_sid = 'AC8d01fcd0e6988b41daddb96ceed2f3f7'
-auth_token = 'e740768d8e680711eda32b3a93ec4599'
+# Replace with your actual credentials from https://www.twilio.com/console
+account_sid = 'your_account_sid_here'
+auth_token = 'your_auth_token_here'
 
 client = Client(account_sid, auth_token)
 
