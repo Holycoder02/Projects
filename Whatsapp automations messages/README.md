@@ -39,7 +39,7 @@ python main.py
 
 Follow the prompts:
 1. **Enter the recipient name** - Name of the person receiving the message
-2. **Enter WhatsApp number** - Phone number with country code (e.g., +916299538998)
+2. **Enter WhatsApp number** - Phone number with country code (e.g., +12345)
 3. **Enter the message** - The message content to send
 4. **Enter the date** - Date in YYYY-MM-DD format (e.g., 2026-04-06)
 5. **Enter the time** - Time in HH:MM 24-hour format (e.g., 20:29)
