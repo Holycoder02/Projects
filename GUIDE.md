@@ -17,7 +17,7 @@ A comprehensive guide to understanding, running, and extending the Projects coll
 
 ## Overview
 
-This collection contains twelve Python projects:
+This collection contains thirteen Python projects:
 - **File Manager**: A file manipulation utility
 - **Rent Calculator**: An expense splitting application
 - **Rock Paper Scissor**: An interactive game
@@ -30,8 +30,9 @@ This collection contains twelve Python projects:
 - **Contact Book**: A contact management system
 - **Spell Checker**: A spelling error detection and correction tool
 - **Student Grade Management System**: A student grade tracking application
+- **WhatsApp Automation Messages**: Automated WhatsApp message scheduling
 
-All projects are built with Python 3.x. GUI projects (Tic Tac Toe, Text Editor, Digital Clock, Image Slideshow, Student Grade Management System) require Tkinter and some require PIL. The Payment QR Code Generator requires qrcode and pillow libraries. The Spell Checker requires pyspellchecker library.
+All projects are built with Python 3.x. GUI projects (Tic Tac Toe, Text Editor, Digital Clock, Image Slideshow, Student Grade Management System) require Tkinter and some require PIL. The Payment QR Code Generator requires qrcode and pillow libraries. The Spell Checker requires pyspellchecker library. The WhatsApp Automation requires twilio library.
 
 ---
 
@@ -696,6 +697,42 @@ phonepe_qr.save("phonepe_qr.png")
 paytm_qr.save("paytm_qr.png")
 googlepay_qr.save("googlepay_qr.png")
 ```
+
+### Running WhatsApp Automation Messages
+
+```bash
+cd "Whatsapp automations messages"
+python main.py
+```
+
+**Requirements**:
+```bash
+pip install twilio
+```
+
+**Twilio Setup**:
+1. Create account at https://www.twilio.com
+2. Get Account SID and Auth Token from Console
+3. Update credentials in `main.py`
+4. Enable WhatsApp messaging in your account
+
+**Usage Example**:
+```
+Enter the recipient name = Raju
+Enter the recipient Whatsapp number with country code (e.g, +12345) = +916299538998
+enter the message you want to send to Raju: Hello! This is an automated message
+enter the date to send the message (YYYY-MM-DD): 2026-04-10
+enter the time to send the message (HH:MM in 24hour format): 14:30
+Message scheduled to be sent to Raju at 2026-04-10 14:30:00.
+Message sent successfully! Message SID: SM1234567890abcdef
+```
+
+**Important Notes**:
+- Keep script running until message is sent
+- Phone numbers must include country code (e.g., +916299538998)
+- Time must be in 24-hour format (00:00 to 23:59)
+- Schedule for future date and time only
+- Never commit Twilio credentials to version control
 
 ### Running Contact Book
 

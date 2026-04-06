@@ -101,6 +101,49 @@ Generate QR codes for UPI payment methods.
 - **Main File**: `main.py`
 - [View Details](Accept%20payment%20with%20paython/README.md)
 
+### 10. **Contact Book** 📞
+A simple contact management system for saving and retrieving contact information.
+- Add, view, and delete contacts
+- Store name and phone number
+- Interactive menu-driven interface
+- Simple and user-friendly
+- **Location**: `Contact book/`
+- **Main File**: `main.py`
+- [View Details](Contact%20book/README.md)
+
+### 11. **Spell Checker** ✏️
+A spelling error detection and correction tool.
+- Check text for spelling errors
+- Suggest corrections for misspelled words
+- Dictionary-based validation
+- Interactive spell checking interface
+- **Location**: `Spell checker/`
+- **Main File**: `main.py`
+- [View Details](Spell%20checker/README.md)
+
+### 12. **Student Grade Management System** 🎓
+A comprehensive grade tracking and management system for students.
+- Add student records with grades
+- Calculate GPA and weighted scores
+- Store and retrieve student data
+- Visual grade display with Tkinter
+- Performance analytics
+- **Location**: `Student Grade mangement system/`
+- **Main File**: `main.py`
+- [View Details](Student%20Grade%20mangement%20system/README.md)
+
+### 13. **WhatsApp Automation Messages** 📱
+Send scheduled WhatsApp messages using Twilio API.
+- Schedule messages for specific date and time
+- User-friendly input prompts
+- Twilio integration for WhatsApp delivery
+- Error handling with detailed messages
+- Automated message delivery
+- **Location**: `Whatsapp automations messages/`
+- **Main File**: `main.py`
+- **Requirements**: Twilio API credentials
+- [View Details](Whatsapp%20automations%20messages/README.md)
+
 ## 🚀 Quick Start
 
 ### File Manager
@@ -157,9 +200,27 @@ cd "Accept payment with paython"
 python main.py
 ```
 
-### Digital Clock
+### Contact Book
 ```bash
-cd "Digital Clock"
+cd "Contact book"
+python main.py
+```
+
+### Spell Checker
+```bash
+cd "Spell checker"
+python main.py
+```
+
+### Student Grade Management System
+```bash
+cd "Student Grade mangement system"
+python main.py
+```
+
+### WhatsApp Automation Messages
+```bash
+cd "Whatsapp automations messages"
 python main.py
 ```
 
