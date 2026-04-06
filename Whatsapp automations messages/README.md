@@ -53,12 +53,12 @@ The script will:
 
 ```
 Enter the recipient name = Raju
-Enter the recipient Whatsapp number with country code (e.g, +12345) = +916299538998
+Enter the recipient Whatsapp number with country code (e.g, +12345) = +9112345
 enter the message you want to send to Raju: Hello! This is an automated message
 enter the date to send the message (YYYY-MM-DD): 2026-04-06
 enter the time to send the message (HH:MM in 24hour format): 20:30
 Message scheduled to be sent to Raju at 2026-04-06 20:30:00.
-Message sent successfully! Message SID: SM1234567890abcdef
+Message sent successfully! Message SID: SM123
 ```
 
 ## Error Handling
